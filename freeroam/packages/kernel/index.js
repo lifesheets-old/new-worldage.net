@@ -50,6 +50,21 @@ global.initModule = (dirName) => {
       throw new Error(`The server has already been initialized. Attempt to reinitialize from a module ${moduleName}`);
     }
     initModules = true; // Инициализация модуля включена
-    serverDebug('[DONE] All modules loaded');
+    serverDebug('All modules loaded');
   }
 }
+
+// Вызов подключения к БД, подключение всех модулей и вызов их инициализации
+mysql.connect(function() {
+  fs.readdirSync(path.dirname(__dirname)).forEach(file => {
+    if (!ignoreModules.includes(file) && fs.existsSync(path.dirname(__dirname)+ "\\" + file + "\\events.js")) {
+      let events = require('..\\' + file + '\\events');
+      mp.events.add(events);
+      activeModules.push(file);
+      if (events["init"] != null) {
+        loadModules.push(file);
+      }
+    }
+  });
+  mp.events.call('init');
+});

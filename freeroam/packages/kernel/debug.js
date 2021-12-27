@@ -2,13 +2,13 @@
 
 // Для северной части
 global.serverDebug = (message, ...args) => {
-    try {
-      if (mp.config.debug.server) {
-        console.log(`[${getTime()}] [DEBUG-SERVER]: ${message}`, args);
-      } else {
-        saveFile('server', `[${getTime()}] [DEBUG-SERVER]: ${message} | ${JSON.stringify(args)}`);
-      }
-    } catch (worldage) {
-      console.log(worldage)
+  try {
+    if (mp.config.debug.server) {
+      console.log(`[DEBUG-SERVER][${getTime()}]: ${message}`);
+    } else {
+      saveFile('server', `[DEBUG-SERVER][${getTime()}]: ${message}`);
     }
-  };
+  } catch (worldage) {
+    console.log(worldage)
+  }
+};

@@ -1,0 +1,31 @@
+{
+	"maxplayers" : 100,
+	"name" : "💕 WORLDAGE.NET | Server #1 | X1 [CLOSED][DEVELOPER][VOICE]",
+	"url" : "worldage.net",
+	"language": "ru",
+	"gamemode" : "roleplay", 
+	"streamdistance" : 500.0,
+	"announce" : false,
+	"csharp" : "disabled",
+	"nodejs" : true,
+	"voice-chat" : false,
+	"voice-chat-sample-rate" : 48000,
+	"fqdn": "srv1.worldage.net",
+	"bind" : "0.0.0.0",
+	"port" : 22005,
+	"api-threading-debugging": false,
+	"allow-cef-debugging": false,
+	"debug": {
+		"server" : false,
+		"client" : false,
+		"mysqli" : false,
+		"retain" : false
+	},
+	"mysql" : {
+		"dbhost" : "localhost",
+		"dbport" : 3306,
+		"dbname" : "worldage",
+		"dbuser" : "root",
+		"dbpass" : "password"
+	}
+}

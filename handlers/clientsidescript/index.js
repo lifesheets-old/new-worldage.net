@@ -1,1 +1,1 @@
-// clientside
+import './character/invoke/camera';

@@ -1,0 +1,30 @@
+{
+  "name": "clientside",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode production --watch --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lifesheets/worldage.net.git"
+  },
+  "author": "lifesheets <lifesheets@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lifesheets/worldage.net/issues"
+  },
+  "homepage": "https://github.com/lifesheets/worldage.net#readme",
+  "devDependencies": {
+    "@sucrase/webpack-loader": "^2.0.0",
+    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#v1.0",
+    "sucrase": "^3.20.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "lodash.chunk": "^4.2.0"
+  }
+}

@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, 'clientsidescript', 'index.js')
+    main: path.resolve(__dirname, 'resources', 'index.js')
   },
   output: {
     path: path.resolve('../freeroam/', 'client_packages'),
